@@ -60,7 +60,7 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
               ),
             ),
             DropdownButtonFormField<int>(
-              initialValue: _durationHours,
+              value: _durationHours,
               items: const [
                 DropdownMenuItem(value: 1, child: Text('1 hour')),
                 DropdownMenuItem(value: 2, child: Text('2 hours')),

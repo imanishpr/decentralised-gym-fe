@@ -47,7 +47,7 @@ class _QrManagerScreenState extends ConsumerState<QrManagerScreen> {
             const Text('No managed gyms found.')
           else ...[
             DropdownButtonFormField<int>(
-              initialValue: selectedGymId,
+              value: selectedGymId,
               decoration: const InputDecoration(labelText: 'Gym', border: OutlineInputBorder()),
               items: gyms
                   .map(

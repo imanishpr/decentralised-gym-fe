@@ -84,7 +84,7 @@ class _GymOwnerDashboardScreenState extends ConsumerState<GymOwnerDashboardScree
               const Text('No managed gyms found. Create one from API first.')
             else ...[
               DropdownButtonFormField<int>(
-                initialValue: state.selectedGymId,
+                value: state.selectedGymId,
                 decoration: const InputDecoration(labelText: 'Select gym', border: OutlineInputBorder()),
                 items: state.gyms
                     .map(

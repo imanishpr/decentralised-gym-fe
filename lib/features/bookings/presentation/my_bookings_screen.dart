@@ -267,7 +267,7 @@ class _EditBookingSheetState extends State<_EditBookingSheet> {
             trailing: IconButton(onPressed: _pickTime, icon: const Icon(Icons.schedule)),
           ),
           DropdownButtonFormField<int>(
-            initialValue: _durationHours,
+            value: _durationHours,
             decoration: const InputDecoration(labelText: 'Duration'),
             items: const [
               DropdownMenuItem(value: 1, child: Text('1 hour')),
