@@ -7,6 +7,8 @@ if [ -z "${API_BASE_URL:-}" ]; then
   exit 1
 fi
 
+echo "Using API_BASE_URL=${API_BASE_URL}"
+
 if ! command -v flutter >/dev/null 2>&1; then
   export PATH="$HOME/flutter/bin:$PATH"
 fi
@@ -21,6 +23,7 @@ fi
 
 git config --global --add safe.directory "$HOME/flutter"
 
+flutter --version
 flutter config --enable-web
 flutter pub get
 flutter build web --release --dart-define=API_BASE_URL="${API_BASE_URL}"
